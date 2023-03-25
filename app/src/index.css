@@ -1,0 +1,13 @@
+/***********************************
+ ********* Global CSS Code *********
+ **********************************/
+
+@import "style/app.css";
+
+/* Import additional components */
+@import "style/chat.css";
+@import "style/join.css";
+@import "style/info.css";
+@import "style/ranking.css";
+@import "style/graph.css";
+@import "style/start.css";

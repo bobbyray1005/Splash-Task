@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "heroku-postbuild": "cd app && npm install && npm run build",
+    "app": "npm start --prefix app",
+    "dev": "concurrently \"npm run server\" \"npm run app\"",
+    "save": "git add --all && git commit -m fix --no-verify && git push origin HEAD",
+    "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+  },
+  "keywords": [],
+  "author": "David Voskanyan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7",
+    "prettier": "2.8.7"
+  }
+}

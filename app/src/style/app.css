@@ -1,0 +1,48 @@
+body {
+  color: #ffffff;
+  background: #15191f;
+}
+
+.card-box {
+  background: #202632;
+  border-radius: 8px;
+  border: 1px solid #323843;
+}
+
+@media screen and (max-width: 768px) {
+  .card-box {
+    margin-bottom: 20px;
+  }
+}
+
+.card-title {
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  color: #ffffff;
+  background: #15191f;
+  border-radius: 6px;
+  border: 1px solid #323843;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #c02e64, #fc5c4a);
+  background-size: 100%;
+  transition: 400ms;
+  padding: 0 1.7em;
+  font-size: 14px;
+  border: 0;
+}
+
+.btn-primary:hover {
+  background-size: 300%;
+}
+
+.btn:disabled {
+  opacity: 1;
+  background: #7c859a;
+}

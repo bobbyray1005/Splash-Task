@@ -1,0 +1,56 @@
+.send-msg {
+  display: flex;
+  padding: 5px;
+  background: #2f3943;
+}
+
+.send-msg input {
+  margin-right: 8px;
+}
+
+.messages-box {
+  height: 115px;
+  font-size: 14px;
+  overflow: hidden scroll;
+}
+
+.message {
+  padding: 5px;
+}
+
+.nickname {
+  font-size: 12px;
+  font-weight: bold;
+  color: #a94b72;
+}
+
+.message-flex {
+  display: flex;
+  align-items: end;
+}
+
+.user-message {
+  margin-left: 5px;
+  padding: 0 5px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #404553;
+}
+
+/* scrollbar style */
+.messages-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.messages-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages-box::-webkit-scrollbar-thumb {
+  background: #15191f;
+  border-radius: 8px;
+}
+
+.messages-box::-webkit-scrollbar-thumb:hover {
+  background: #1a1f28;
+}

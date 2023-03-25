@@ -1,0 +1,24 @@
+.graph-box {
+  position: relative;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.graph-box .recharts-surface {
+  max-width: 100%;
+}
+
+.result {
+  position: absolute;
+  z-index: 10;
+  top: 50px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.graph-box .result.animation-ended {
+  color: #f14e5f;
+}

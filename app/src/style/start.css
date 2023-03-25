@@ -1,0 +1,76 @@
+.start-section .start-button {
+  width: 100%;
+  padding: 10px;
+}
+
+.round-box {
+  overflow: hidden;
+}
+
+.speed-box {
+  padding: 10px 10px 5px;
+}
+
+.speed-box .speed {
+  padding: 0;
+}
+
+.speed-box .speed-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  margin: -5px 3px 0;
+}
+
+.speed-box .speed-values div.selected {
+  color: #f14e5f;
+}
+
+.card-box.toggle {
+  flex-wrap: wrap;
+}
+
+.card-box.toggle .toggle-title {
+  color: #6f7485;
+  font-size: 10px;
+}
+
+.card-box.toggle .toggle-menu {
+  width: 100%;
+  display: flex;
+  padding-bottom: 5px;
+}
+
+.card-box.toggle .toggle-input {
+  width: calc(100% - 58px);
+  font-size: 15px;
+  text-align: center;
+  padding: 0 5px;
+  margin: 0 5px;
+  -moz-appearance: textfield;
+}
+
+.toggle-input::-webkit-outer-spin-button,
+.toggle-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.card-box.toggle .toggle-menu .option {
+  min-width: 24px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #323843;
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  color: #a7a7a7;
+}
+
+.card-box.toggle .toggle-menu .option:hover {
+  background: #232831;
+}
+
+.rs-input-number-btn-group-vertical {
+  display: none;
+}
