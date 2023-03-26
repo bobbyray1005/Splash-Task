@@ -6,7 +6,6 @@
   "scripts": {
     "server": "nodemon server.js",
     "start": "node server.js",
-    "heroku-postbuild": "cd app && npm install && npm run build",
     "app": "npm start --prefix app",
     "save": "git add --all && git commit -m fix --no-verify && git push origin HEAD",
     "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\""

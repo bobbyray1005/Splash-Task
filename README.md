@@ -42,7 +42,7 @@ To get a local copy up and running follow these simple steps.
    ```sh
    npm run server
    ```
-5. Start the frontend (from the app directory):
+5. In the second console, start the frontend (from the app directory):
    ```sh
    npm run start
    ```
