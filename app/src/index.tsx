@@ -7,7 +7,7 @@ import "./index.css";
 // Redux
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import dataReducer from "./features/myStore";
+import dataReducer from "./store";
 
 const store = configureStore({
   reducer: {

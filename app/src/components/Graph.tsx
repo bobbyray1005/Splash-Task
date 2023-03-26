@@ -4,9 +4,9 @@ import CountUp from "react-countup";
 import { useSelector } from "react-redux";
 
 function Graph() {
-  const generatedValue = useSelector((state) => state.theStore.generatedValue);
+  const generatedValue = useSelector((state: any) => state.theStore.generatedValue);
   const graphValue = [{ value: 0 }, { value: 0 }, { value: generatedValue }];
-  const speedValue = useSelector((state) => state.theStore.speed);
+  const speedValue = useSelector((state: any) => state.theStore.speed);
 
   function calcSpeed() {
     return 3000 + 1000 * speedValue;

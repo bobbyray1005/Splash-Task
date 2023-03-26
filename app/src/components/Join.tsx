@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setUserName } from "../features/myStore";
+import { setUserName } from "../store";
 import { default as socket } from "./ws";
 
 function Join() {
   const dispatch = useDispatch();
   const [nickname, setNickname] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const userName = useSelector((state) => state.theStore.userName);
+  const userName = useSelector((state:any) => state.theStore.userName);
 
   const submitNickname = () => {
     socket.emit("user nickname", nickname);

@@ -5,7 +5,7 @@ import { default as socket } from "./ws";
 function Chat() {
   const [nickname, setNickname] = useState("");
   const [msg, setMsg] = useState("");
-  const [chat, setChat] = useState([]);
+  const [chat, setChat] = useState<any[]>([]);
   const [usersOnline, setUsersOnline] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Chat() {
     });
 
     let objDiv = document.getElementById("msg");
-    objDiv.scrollTop = objDiv.scrollHeight;
+    if (objDiv) objDiv.scrollTop = objDiv.scrollHeight;
 
     return () => {
       socket.off();
@@ -26,15 +26,15 @@ function Chat() {
       socket.emit("new-user");
     });
 
-    socket.on("users-on", (list) => {
+    socket.on("users-on", (list:any) => {
       setUsersOnline(list);
     });
 
-    socket.on("user-data", (nick) => {
+    socket.on("user-data", (nick:any) => {
       if (!nickname) setNickname(nick[0]);
     });
 
-    socket.on("user-disconnected", (user) => {
+    socket.on("user-disconnected", (user: string) => {
       if (user !== null) {
         setChat([...chat, `${user} left the chat 👋🏻`]);
       }
@@ -45,7 +45,7 @@ function Chat() {
     };
   }, [chat]);
 
-  const submitMsg = (e) => {
+  const submitMsg = (e:any) => {
     e.preventDefault();
 
     if (msg === "") {
