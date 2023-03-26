@@ -31,12 +31,6 @@ function Chat() {
       }
     });
 
-    return () => {
-      socket.off();
-    };
-  }, []);
-
-  useEffect(() => {
     let objDiv = document.getElementById("msg");
     if (objDiv) objDiv.scrollTop = objDiv.scrollHeight;
 
