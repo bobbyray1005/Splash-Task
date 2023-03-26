@@ -18,8 +18,8 @@ function Start() {
   let [autoplayersValue, setAutoplayersValue] = useState([]);
 
   // Import global value from Redux
-  const animationShow = useSelector((state: any) => state.theStore.animShow);
-  const userBalance = useSelector((state: any) => state.theStore.balance);
+  const animationShow = useSelector((state: any) => state.reduxStore.animShow);
+  const userBalance = useSelector((state: any) => state.reduxStore.balance);
 
   interface players {
     id: number;

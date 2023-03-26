@@ -1,15 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const theStore = createSlice({
-  name: "theStore",
-  initialState: {
-    userName: "",
-    balance: 1000,
-    generatedValue: 0,
-    speed: 0,
-    animShow: false,
-    usersRanking: [],
-  },
+export interface CounterState {
+  userName: string;
+  balance: number;
+  generatedValue: number;
+  speed: number;
+  animShow: boolean;
+  usersRanking: any;
+}
+
+const initialState: CounterState = {
+  userName: "",
+  balance: 1000,
+  generatedValue: 0,
+  speed: 0,
+  animShow: false,
+  usersRanking: [],
+};
+
+export const reduxStore = createSlice({
+  name: "reduxStore",
+  initialState,
   reducers: {
     setUserName: (state, action) => {
       state.userName = action.payload;
@@ -45,6 +56,6 @@ export const {
   animStateVal,
   updateBalanceVal,
   setUsersRanking,
-} = theStore.actions;
+} = reduxStore.actions;
 
-export default theStore.reducer;
+export default reduxStore.reducer;

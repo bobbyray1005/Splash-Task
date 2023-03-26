@@ -11,7 +11,7 @@ import dataReducer from "./store";
 
 const store = configureStore({
   reducer: {
-    theStore: dataReducer,
+    reduxStore: dataReducer,
   },
 });
 

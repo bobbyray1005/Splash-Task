@@ -2,8 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function Ranking() {
-  let ranking = useSelector((state: any) => state.theStore.usersRanking);
-  let animationShow = useSelector((state: any) => state.theStore.animShow);
+  let ranking = useSelector((state: any) => state.reduxStore.usersRanking);
+  let animationShow = useSelector((state: any) => state.reduxStore.animShow);
   let arr = [...ranking];
 
   return (
