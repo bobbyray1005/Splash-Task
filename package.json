@@ -8,7 +8,7 @@
     "start": "node server.js",
     "app": "npm start --prefix app",
     "save": "git add --all && git commit -m fix --no-verify && git push origin HEAD",
-    "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "prettier": "prettier --write \"**/*.+(ts|tsx|json|css|md)\""
   },
   "keywords": [],
   "author": "David Voskanyan",

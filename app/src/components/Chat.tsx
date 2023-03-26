@@ -13,24 +13,15 @@ function Chat() {
       setChat([...chat, { nickname, msg }]);
     });
 
-    let objDiv = document.getElementById("msg");
-    if (objDiv) objDiv.scrollTop = objDiv.scrollHeight;
-
-    return () => {
-      socket.off();
-    };
-  }, [chat]);
-
-  useEffect(() => {
     socket.on("connect", () => {
       socket.emit("new-user");
     });
 
-    socket.on("users-on", (list:any) => {
+    socket.on("users-on", (list: any) => {
       setUsersOnline(list);
     });
 
-    socket.on("user-data", (nick:any) => {
+    socket.on("user-data", (nick: any) => {
       if (!nickname) setNickname(nick[0]);
     });
 
@@ -43,9 +34,18 @@ function Chat() {
     return () => {
       socket.off();
     };
+  }, []);
+
+  useEffect(() => {
+    let objDiv = document.getElementById("msg");
+    if (objDiv) objDiv.scrollTop = objDiv.scrollHeight;
+
+    return () => {
+      socket.off();
+    };
   }, [chat]);
 
-  const submitMsg = (e:any) => {
+  const submitMsg = (e: any) => {
     e.preventDefault();
 
     if (msg === "") {

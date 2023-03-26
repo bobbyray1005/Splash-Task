@@ -7,7 +7,7 @@ function Join() {
   const dispatch = useDispatch();
   const [nickname, setNickname] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const userName = useSelector((state:any) => state.theStore.userName);
+  const userName = useSelector((state: any) => state.theStore.userName);
 
   const submitNickname = () => {
     socket.emit("user nickname", nickname);

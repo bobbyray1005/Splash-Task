@@ -18,32 +18,32 @@ function Start() {
   let [autoplayersValue, setAutoplayersValue] = useState([]);
 
   // Import global value from Redux
-  const animationShow = useSelector((state:any) => state.theStore.animShow);
-  const userBalance = useSelector((state:any) => state.theStore.balance);
+  const animationShow = useSelector((state: any) => state.theStore.animShow);
+  const userBalance = useSelector((state: any) => state.theStore.balance);
 
   interface players {
-    id: number,
-    name: string,
-    point: any,
-    multiplier: any,
-    score: number,
+    id: number;
+    name: string;
+    point: any;
+    multiplier: any;
+    score: number;
   }
 
-  function random(min:number, max:number, decimal:number) {
+  function random(min: number, max: number, decimal: number) {
     return Number((Math.random() * (max - min + 1) + min).toFixed(decimal));
   }
 
   useEffect(() => {
-    let autoplayersGuess:any = [];
+    let autoplayersGuess: any = [];
 
     for (let i = 0; i < 5; i++) {
-      let data : players = {
+      let data: players = {
         id: i,
         name: i === 0 ? "You" : `CPU ${i}`,
         point: "-",
         multiplier: "-",
         score: 0,
-      }
+      };
       autoplayersGuess.push(data);
     }
 
@@ -52,21 +52,21 @@ function Start() {
   }, []);
 
   function generateAutoplayers() {
-    let autoplayersGuess:any  = [];
-    const data : players = {
+    let autoplayersGuess: any = [];
+    const data: players = {
       id: 0,
       name: "You",
       point: pointsValue,
       multiplier: multiplierValue,
       score: Math.round(pointsValue * multiplierValue),
-    }
+    };
 
     autoplayersGuess.push(data);
 
     // Generate guess for 4 bots
     for (let i = 0; i < 4; i++) {
-      let p:number = random(1, 700, 0),
-        m:number = random(1, 4, 2);
+      let p: number = random(1, 700, 0),
+        m: number = random(1, 4, 2);
 
       autoplayersGuess.push({
         id: i + 1,
@@ -148,7 +148,7 @@ function Start() {
                 min="0"
                 max={userBalance}
                 step="25"
-                onChange={(e:any) => setPointsValue(e.target.value)}
+                onChange={(e: any) => setPointsValue(e.target.value)}
                 value={pointsValue}
               />
               <button className="toggle-plus option" onClick={pointsPlus}>
@@ -171,7 +171,7 @@ function Start() {
                 min="1"
                 max="10"
                 step="0.25"
-                onChange={(e:any) => setMultiplierValue(e.target.value)}
+                onChange={(e: any) => setMultiplierValue(e.target.value)}
                 value={multiplierValue}
               />
               <button className="toggle-plus option" onClick={multiplierPlus}>
@@ -202,7 +202,7 @@ function Start() {
             </tr>
           </thead>
           <tbody>
-            {autoplayersValue.map((user:any, index:number) => (
+            {autoplayersValue.map((user: any, index: number) => (
               <tr key={user.id} className={index === 0 ? "my-result" : ""}>
                 <td>{user.name}</td>
                 <td>{user.point}</td>
@@ -222,7 +222,7 @@ function Start() {
           min="1"
           max="5"
           step="1"
-          onChange={(e:any) => setSpeedValue(e.target.value)}
+          onChange={(e: any) => setSpeedValue(e.target.value)}
           value={speedValue}
         />
 

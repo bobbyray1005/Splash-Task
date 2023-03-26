@@ -2,8 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function Info() {
-  const userName = useSelector((state:any) => state.theStore.userName);
-  const userBalance = useSelector((state:any) => state.theStore.balance);
+  const userName = useSelector((state: any) => state.theStore.userName);
+  const userBalance = useSelector((state: any) => state.theStore.balance);
 
   return (
     <div className="row">
