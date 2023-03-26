@@ -10,11 +10,13 @@ This is a guessing game based on random numbers and will progress through a seri
 
 ### Built With
 
+- TypeScript
 - React.js
 - Redux
 - Node.js
 - Socket.io
 - Bootstrap CSS
+- Prettier
 
 <!-- GETTING STARTED -->
 
@@ -36,9 +38,13 @@ To get a local copy up and running follow these simple steps.
    ```sh
    npm install
    ```
-4. Run the project using this command:
+4. Start the server (root directory):
    ```sh
-   npm run dev
+   npm run server
+   ```
+5. Start the frontend (from the app directory):
+   ```sh
+   npm run start
    ```
 
 ## Features
